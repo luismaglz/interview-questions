@@ -27,41 +27,23 @@ interface IMDB_Response {
   results: IMovie[];
 }
 
-async function fetchData(this: HTMLElement, ev: MouseEvent): Promise<IMovie[]> {
+async function fetchData(this: HTMLElement, ev: MouseEvent): Promise<void> {
   const input = document.getElementById('data-input') as HTMLInputElement;
   const inputValue = input.value;
-  const searchKeyword = 'batman';
   // endpoint
   const IMDB_API_SEARCH = 'https://imdb-api.com/en/API/SearchMovie/k_d3adyy0g/';
 
-  const response = await axios.get<IMDB_Response>(
-    `${IMDB_API_SEARCH}${inputValue || searchKeyword}`
-  );
+  const response = await axios.get<IMDB_Response>();
 
   console.log(response);
-  createAndRenderTable(response.data.results);
+  // createAndRenderTable(response.data.results);
 }
 
 function createAndRenderTable(movies: IMovie[]): void {
   const tableContainer = document.getElementById('create-table-here');
-  const movieRows = movies.map((movie) => {
-    return `
-    <tr>
-      <td><img src="${movie.image}" class="movie-image" width="50px" height="50px"></td>
-      <td>${movie.title}</td>
-      <td>${movie.description}</td>
-   </tr>`;
-  });
-  const table = `
-  <table class="movie-table">
-    <tr>
-      <td>Title</td>
-      <td>description</td>
-    </tr>
-    ${movieRows.join('')}
-  </table>
-  `;
-  tableContainer.innerHTML = table;
+
+  // CREATE YOUR TABLE
+  // tableContainer.innerHTML = table;
 }
 
 function initialize(): void {
