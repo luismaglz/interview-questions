@@ -1,6 +1,6 @@
 # Tasks
 
-### 1. Fetch data from IMDB API - link is provided - when AppComponent loads
+### 1. Fetch data from IMDB API - link is provided - when document loads
 
 ### 2. Save results from HTTP response in component state
 
