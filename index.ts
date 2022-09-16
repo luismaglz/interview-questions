@@ -72,16 +72,6 @@ function initialize(): void {
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
 appDiv.innerHTML = `
-<h1>Interview Question</h1>
-<ol>
-  <li>Fetch data from IMDB API - link is provided - when AppComponent loads</li>
-  <li>Save results from HTTP response in component state</li>
-  <li>Display results in AppComponent template in table format displaying "title" and "description" fields in 2 columns</li>
-  <li>Format title to be ALL CAPS</li>
-  <li>Add some borders to the table</li>
-  <li>(optional) Add input + button to make dynamic queries to IMDB API (searchKeyword)</li>
-  <li>(optional) Display small image 50px wide in a new (first) column</li>
-</ol>
 <button id="fetch-data-button">Fetch Data</button><input id="data-input" placeholder="movie title goes here"></input>
 <div id="create-table-here">
 create your table here
