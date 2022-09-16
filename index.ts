@@ -27,7 +27,7 @@ interface IMDB_Response {
   results: IMovie[];
 }
 
-async function fetchData(this: HTMLElement, ev: MouseEvent): Promise<IMovie[]> {
+async function fetchData(this: HTMLElement, ev: MouseEvent): Promise<void> {
   const input = document.getElementById('data-input') as HTMLInputElement;
   const inputValue = input.value;
   const searchKeyword = 'batman';
