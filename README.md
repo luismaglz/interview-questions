@@ -4,7 +4,7 @@
 
 ### 2. Save results from HTTP response in component state
 
-### 3. Display results in AppComponent template in table format displaying `title` and `description` fields in 2 columns
+### 3. Display results in a table format displaying `title` and `description` fields in 2 columns
 
 ### 4. Format title to be ALL CAPS
 
