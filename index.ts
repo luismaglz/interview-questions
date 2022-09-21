@@ -27,13 +27,13 @@ interface IMDB_Response {
   results: IMovie[];
 }
 
-async function fetchData(element: HTMLElement, ev: MouseEvent): Promise<void> {
+async function fetchData(this: HTMLElement, ev: MouseEvent): Promise<void> {
   const input = document.getElementById('data-input') as HTMLInputElement;
   const inputValue = input.value;
   // endpoint
   const IMDB_API_SEARCH = 'https://imdb-api.com/en/API/SearchMovie/k_d3adyy0g/';
 
-  const response = await axios.get<IMDB_Response>();
+  axios.get<IMDB_Response>().then((response) => {});
 
   console.log(response);
   // createAndRenderTable(response.data.results);
