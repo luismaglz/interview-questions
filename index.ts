@@ -28,10 +28,8 @@ interface IMDB_Response {
 }
 
 async function fetchData(): Promise<void> {
-  const input = document.getElementById('data-input') as HTMLInputElement;
-  const inputValue = input.value;
   // endpoint
-  const IMDB_API_SEARCH = 'https://imdb-api.com/en/API/SearchMovie/k_d3adyy0g/';
+  const IMDB_API_SEARCH = 'https://jsonplaceholder.typicode.com/albums';
 
   axios.get<IMDB_Response>().then((response) => {});
 
@@ -54,7 +52,7 @@ function initialize(): void {
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
 appDiv.innerHTML = `
-<button id="fetch-data-button">Fetch Data</button><input id="data-input" placeholder="movie title goes here"></input>
+<button id="fetch-data-button">Fetch Data</button>
 <div id="create-table-here">
 create your table here
 </div>
